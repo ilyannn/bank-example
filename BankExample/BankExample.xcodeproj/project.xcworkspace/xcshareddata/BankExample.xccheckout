@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CC3FE7BE-B656-4906-B4DB-511D3A902CD8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A853C5A60CA726450B35DC1A3F1BF48E67604F2D</key>
+		<string>https://github.com/ilyannn/bank-example</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BankExample/BankExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A853C5A60CA726450B35DC1A3F1BF48E67604F2D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ilyannn/bank-example</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A853C5A60CA726450B35DC1A3F1BF48E67604F2D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A853C5A60CA726450B35DC1A3F1BF48E67604F2D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bank-example</string>
+		</dict>
+	</array>
+</dict>
+</plist>
