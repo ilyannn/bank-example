@@ -12,6 +12,7 @@ import XCTest
 class SecureKeysTests: XCTestCase {
     
     let secureKeys = SecureKeys()
+    let testMessage = "something"
 
     override func setUp() {
         super.setUp()
@@ -24,22 +25,20 @@ class SecureKeysTests: XCTestCase {
     }
     
     func testKeyGeneration() {
-        XCTAssertNotNil(secureKeys.publicKey,  "Public key generated")
-        XCTAssertNotNil(secureKeys.privateKey, "Private key generated")
+        XCTAssertNotNil(secureKeys.publicKey,  "Public key should be generated")
+        XCTAssertNotNil(secureKeys.privateKey, "Private key should be generated")
     }
     
-    func testSignatureLength() {
-        let signature = secureKeys.base64SignatureStringForMessage("something")
-        println("Encoded base64 signature = '\(signature)'")
+    func testSignature() {
+        let signature = secureKeys.base64SignatureStringForMessage(testMessage)
+//        println("Encoded base64 signature = '\(signature)'")
         XCTAssertEqual(count(signature), 172) // next number up from 1024/6 that is divisible by 4
+        XCTAssert(secureKeys.verifyBase64Signature(signature, forMessage: testMessage))
     }
-    
-    
-/*    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testFalseSignature() {
+        let signature = secureKeys.base64SignatureStringForMessage(testMessage + " else")
+        XCTAssert(!secureKeys.verifyBase64Signature(signature, forMessage: testMessage))
     }
- */   
+
 }

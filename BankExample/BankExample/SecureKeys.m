@@ -69,6 +69,7 @@
 
 @implementation SecureKeys
 
+// MARK: Apple methods (with modifications)
 + (NSData *)getHashBytes:(NSData *)plainText {
     CC_SHA1_CTX ctx;
     uint8_t * hashBytes = NULL;
@@ -125,6 +126,24 @@
     return signedHash;
 }
 
+- (BOOL)verifySignatureOf:(NSData *)plainText signature:(NSData *)sig {
+    size_t signedHashBytesSize = 0;
+    SecKeyRef publicKey = self.publicKey;
+    
+    // Get the size of the assymetric block.
+    signedHashBytesSize = SecKeyGetBlockSize(publicKey);
+    
+    return noErr == SecKeyRawVerify(publicKey, 
+                                  kTypeOfSigPadding, 
+                                  (const uint8_t *)[[[self class] getHashBytes:plainText] bytes],
+                                  kChosenDigestLength, 
+                                  (const uint8_t *)[sig bytes],
+                                  signedHashBytesSize
+                    );
+    
+}
+
+// MARK: - Our wrappers
 - (instancetype)init {
     if (self = [super init]) {
         SecKeyRef publicKey = NULL;
@@ -158,6 +177,20 @@
     NSData *encoded = [message dataUsingEncoding:NSUTF8StringEncoding];
     NSData *signature = [self signatureBytesForData:encoded];
     return [signature base64EncodedStringWithOptions:0];
+}
+
+- (BOOL)verifyBase64Signature:(NSString *)base64Signature forMessage:(NSString *)message {
+    NSData *signature = [[NSData alloc ] initWithBase64EncodedString:base64Signature options:0];
+    if (!signature) { 
+        return NO;
+    }
+
+    NSData *encoded = [message dataUsingEncoding:NSUTF8StringEncoding];
+    if (!encoded) {
+        return NO;
+    }
+    
+    return [self verifySignatureOf:encoded signature:signature];
 }
 
 @end

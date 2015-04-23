@@ -74,5 +74,5 @@
 @property(readonly) SecKeyRef privateKey;
 
 - (NSString *)base64SignatureStringForMessage:(NSString *)message;
-
+- (BOOL)verifyBase64Signature:(NSString *)base64Signature forMessage:(NSString *)message;
 @end
