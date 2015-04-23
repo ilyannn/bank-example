@@ -39,10 +39,10 @@
 		BAE93FCF1AE99D7700397F41 /* BankExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE93FD41AE99D7700397F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE93FD51AE99D7700397F41 /* BankExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankExampleTests.swift; sourceTree = "<group>"; };
-		BAE93FDF1AE99ECA00397F41 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		BAE93FDF1AE99ECA00397F41 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Security.swift; path = BankExample/Security.swift; sourceTree = "<group>"; };
 		BAE93FE11AE99F3600397F41 /* BankExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		BAE93FE21AE99F3600397F41 /* SecureKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureKeys.h; sourceTree = "<group>"; };
-		BAE93FE31AE99F3600397F41 /* SecureKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureKeys.m; sourceTree = "<group>"; };
+		BAE93FE21AE99F3600397F41 /* SecureKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecureKeys.h; path = BankExample/SecureKeys.h; sourceTree = "<group>"; };
+		BAE93FE31AE99F3600397F41 /* SecureKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecureKeys.m; path = BankExample/SecureKeys.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,7 @@
 		BAE93FB11AE99D7700397F41 = {
 			isa = PBXGroup;
 			children = (
+				BAE93FE61AE9B05D00397F41 /* Security */,
 				BAE93FBC1AE99D7700397F41 /* BankExample */,
 				BAE93FD21AE99D7700397F41 /* BankExampleTests */,
 				BAE93FBB1AE99D7700397F41 /* Products */,
@@ -90,9 +91,6 @@
 				BAE93FC61AE99D7700397F41 /* Images.xcassets */,
 				BAE93FC81AE99D7700397F41 /* LaunchScreen.xib */,
 				BAE93FBD1AE99D7700397F41 /* Supporting Files */,
-				BAE93FDF1AE99ECA00397F41 /* Security.swift */,
-				BAE93FE21AE99F3600397F41 /* SecureKeys.h */,
-				BAE93FE31AE99F3600397F41 /* SecureKeys.m */,
 				BAE93FE11AE99F3600397F41 /* BankExample-Bridging-Header.h */,
 			);
 			path = BankExample;
@@ -121,6 +119,16 @@
 				BAE93FD41AE99D7700397F41 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAE93FE61AE9B05D00397F41 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				BAE93FDF1AE99ECA00397F41 /* Security.swift */,
+				BAE93FE21AE99F3600397F41 /* SecureKeys.h */,
+				BAE93FE31AE99F3600397F41 /* SecureKeys.m */,
+			);
+			name = Security;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

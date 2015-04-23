@@ -9,8 +9,10 @@
 import UIKit
 import XCTest
 
-class BankExampleTests: XCTestCase {
+class SecureKeysTests: XCTestCase {
     
+    let secureKeys = SecureKeys()
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,9 +24,14 @@ class BankExampleTests: XCTestCase {
     }
     
     func testKeyGeneration() {
-        let keys = SecureKeys()
-        XCTAssertNotNil(keys.publicKey,  "Public key generated")
-        XCTAssertNotNil(keys.privateKey, "Private key generated")
+        XCTAssertNotNil(secureKeys.publicKey,  "Public key generated")
+        XCTAssertNotNil(secureKeys.privateKey, "Private key generated")
+    }
+    
+    func testSignatureLength() {
+        let signature = secureKeys.base64SignatureStringForMessage("something")
+        println("Encoded base64 signature = '\(signature)'")
+        XCTAssertEqual(count(signature), 172) // next number up from 1024/6 that is divisible by 4
     }
     
     
