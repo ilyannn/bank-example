@@ -32,7 +32,7 @@ class SecureKeysTests: XCTestCase {
     func testSignature() {
         let signature = secureKeys.base64SignatureStringForMessage(testMessage)
 //        println("Encoded base64 signature = '\(signature)'")
-        XCTAssertEqual(count(signature), 172) // next number up from 1024/6 that is divisible by 4
+        XCTAssertLessThan(6 * count(signature) - 1024, 24,  "Base64 enconding length must equal to the next number up from block size/6 that is divisible by 4")
         XCTAssert(secureKeys.verifyBase64Signature(signature, forMessage: testMessage))
     }
 
