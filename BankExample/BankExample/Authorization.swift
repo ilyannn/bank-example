@@ -8,11 +8,14 @@
 
 import Foundation
 
+/// An authorization to be trasmitted to the service.
 struct Authorization {
-    let secureKeys: SecureKeys
-
+    // Stored properties
+    var secureKeys: SecureKeys
     var authId: String
     var authDate: time_t
+    
+    // Computed properties
     var authMessage: String { return authId + ":" + String(authDate) }
 
     var JSONObject: AnyObject {
