@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BAE93FC01AE99D7700397F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FBF1AE99D7700397F41 /* AppDelegate.swift */; };
-		BAE93FC21AE99D7700397F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FC11AE99D7700397F41 /* ViewController.swift */; };
+		BAE93FC21AE99D7700397F41 /* Login View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FC11AE99D7700397F41 /* Login View Controller.swift */; };
 		BAE93FC51AE99D7700397F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE93FC31AE99D7700397F41 /* Main.storyboard */; };
 		BAE93FC71AE99D7700397F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE93FC61AE99D7700397F41 /* Images.xcassets */; };
 		BAE93FCA1AE99D7700397F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE93FC81AE99D7700397F41 /* LaunchScreen.xib */; };
@@ -20,6 +20,8 @@
 		BAE93FED1AE9C0DB00397F41 /* AuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEC1AE9C0DB00397F41 /* AuthorizationTests.swift */; };
 		BAE93FEE1AE9C0DF00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */; };
 		BAE93FF01AE9C39200397F41 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEF1AE9C39200397F41 /* Support.swift */; };
+		BAE93FF31AEA5F2D00397F41 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Operations.swift */; };
+		BAE93FF41AEA5F2E00397F41 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 		BAE93FBA1AE99D7700397F41 /* BankExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE93FBE1AE99D7700397F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE93FBF1AE99D7700397F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAE93FC11AE99D7700397F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAE93FC11AE99D7700397F41 /* Login View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login View Controller.swift"; sourceTree = "<group>"; };
 		BAE93FC41AE99D7700397F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAE93FC61AE99D7700397F41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BAE93FC91AE99D7700397F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authorization.swift; path = BankExample/Authorization.swift; sourceTree = "<group>"; };
 		BAE93FEC1AE9C0DB00397F41 /* AuthorizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTests.swift; sourceTree = "<group>"; };
 		BAE93FEF1AE9C39200397F41 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Support.swift; path = BankExample/Support.swift; sourceTree = "<group>"; };
+		BAE93FF11AEA5E7500397F41 /* Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operations.swift; path = BankExample/Operations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				BAE93FBF1AE99D7700397F41 /* AppDelegate.swift */,
-				BAE93FC11AE99D7700397F41 /* ViewController.swift */,
+				BAE93FC11AE99D7700397F41 /* Login View Controller.swift */,
 				BAE93FC31AE99D7700397F41 /* Main.storyboard */,
 				BAE93FC61AE99D7700397F41 /* Images.xcassets */,
 				BAE93FC81AE99D7700397F41 /* LaunchScreen.xib */,
@@ -137,6 +140,7 @@
 				BAE93FE31AE99F3600397F41 /* SecureKeys.m */,
 				BAE93FEF1AE9C39200397F41 /* Support.swift */,
 				BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */,
+				BAE93FF11AEA5E7500397F41 /* Operations.swift */,
 			);
 			name = "Authorization model";
 			sourceTree = "<group>";
@@ -241,9 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE93FC21AE99D7700397F41 /* ViewController.swift in Sources */,
+				BAE93FC21AE99D7700397F41 /* Login View Controller.swift in Sources */,
 				BAE93FC01AE99D7700397F41 /* AppDelegate.swift in Sources */,
 				BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */,
+				BAE93FF31AEA5F2D00397F41 /* Operations.swift in Sources */,
 				BAE93FE01AE99ECA00397F41 /* Security.swift in Sources */,
 				BAE93FEB1AE9B8FA00397F41 /* Authorization.swift in Sources */,
 			);
@@ -256,6 +261,7 @@
 				BAE93FE51AE9A2EC00397F41 /* SecureKeys.m in Sources */,
 				BAE93FF01AE9C39200397F41 /* Support.swift in Sources */,
 				BAE93FED1AE9C0DB00397F41 /* AuthorizationTests.swift in Sources */,
+				BAE93FF41AEA5F2E00397F41 /* Operations.swift in Sources */,
 				BAE93FD61AE99D7700397F41 /* SecureKeysTests.swift in Sources */,
 				BAE93FEE1AE9C0DF00397F41 /* Authorization.swift in Sources */,
 			);

@@ -1,25 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="LoginViewController" customModule="BankExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="username" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hzt-lS-U8t">
+                                <rect key="frame" x="16" y="115" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BIp-zA-0Ad"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="valueChangedInField:" destination="vXZ-lx-hvc" eventType="editingChanged" id="1ia-cA-avo"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="OLV-Uz-oJm"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbu-bt-ke2">
+                                <rect key="frame" x="16" y="28" width="113" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="86X-m9-V5Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-jR-gJa">
+                                <rect key="frame" x="16" y="183" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VLG-K1-kpd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="send" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="valueChangedInField:" destination="vXZ-lx-hvc" eventType="editingChanged" id="7Xv-mk-m00"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="qaI-VC-vRV"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mb4-QQ-3g4">
+                                <rect key="frame" x="16" y="258" width="288" height="83"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="proceedWithForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UbN-lj-n9p"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qvi-jR-gJa" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="AFp-6k-9nr"/>
+                            <constraint firstItem="Mb4-QQ-3g4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="D2O-a1-Dqz"/>
+                            <constraint firstItem="hzt-lS-U8t" firstAttribute="leading" secondItem="Pbu-bt-ke2" secondAttribute="leading" id="Dw5-FL-ObL"/>
+                            <constraint firstItem="hzt-lS-U8t" firstAttribute="trailing" secondItem="Qvi-jR-gJa" secondAttribute="trailing" id="SPg-ND-F3H"/>
+                            <constraint firstItem="Mb4-QQ-3g4" firstAttribute="leading" secondItem="Qvi-jR-gJa" secondAttribute="leading" id="Yxm-37-xaH"/>
+                            <constraint firstItem="Qvi-jR-gJa" firstAttribute="trailing" secondItem="Mb4-QQ-3g4" secondAttribute="trailing" id="aoF-Gi-usN"/>
+                            <constraint firstItem="Qvi-jR-gJa" firstAttribute="top" secondItem="hzt-lS-U8t" secondAttribute="bottom" constant="28" id="hda-mz-RoF"/>
+                            <constraint firstItem="Qvi-jR-gJa" firstAttribute="leading" secondItem="hzt-lS-U8t" secondAttribute="leading" id="jvZ-PP-A2G"/>
+                            <constraint firstItem="hzt-lS-U8t" firstAttribute="top" secondItem="Pbu-bt-ke2" secondAttribute="bottom" constant="16" id="kAI-aS-LpS"/>
+                            <constraint firstItem="Pbu-bt-ke2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="rad-tT-ZVh"/>
+                            <constraint firstItem="Mb4-QQ-3g4" firstAttribute="top" secondItem="Qvi-jR-gJa" secondAttribute="bottom" constant="35" id="uQv-DH-Bvs"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="loginField" destination="hzt-lS-U8t" id="3kj-ad-Hgd"/>
+                        <outlet property="okButton" destination="Mb4-QQ-3g4" id="cC9-ME-VgZ"/>
+                        <outlet property="passwordField" destination="Qvi-jR-gJa" id="NxI-DO-Wb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="289" y="313"/>
         </scene>
     </scenes>
 </document>
