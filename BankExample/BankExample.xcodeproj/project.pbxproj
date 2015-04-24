@@ -16,6 +16,7 @@
 		BAE93FE01AE99ECA00397F41 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FDF1AE99ECA00397F41 /* Security.swift */; };
 		BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FE31AE99F3600397F41 /* SecureKeys.m */; };
 		BAE93FE51AE9A2EC00397F41 /* SecureKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FE31AE99F3600397F41 /* SecureKeys.m */; };
+		BAE93FEB1AE9B8FA00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		BAE93FE11AE99F3600397F41 /* BankExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		BAE93FE21AE99F3600397F41 /* SecureKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecureKeys.h; path = BankExample/SecureKeys.h; sourceTree = "<group>"; };
 		BAE93FE31AE99F3600397F41 /* SecureKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecureKeys.m; path = BankExample/SecureKeys.m; sourceTree = "<group>"; };
+		BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		BAE93FBC1AE99D7700397F41 /* BankExample */ = {
 			isa = PBXGroup;
 			children = (
+				BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */,
 				BAE93FBF1AE99D7700397F41 /* AppDelegate.swift */,
 				BAE93FC11AE99D7700397F41 /* ViewController.swift */,
 				BAE93FC31AE99D7700397F41 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 				BAE93FC01AE99D7700397F41 /* AppDelegate.swift in Sources */,
 				BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */,
 				BAE93FE01AE99ECA00397F41 /* Security.swift in Sources */,
+				BAE93FEB1AE9B8FA00397F41 /* Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

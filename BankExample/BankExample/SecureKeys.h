@@ -64,6 +64,8 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// RSA key pair
 @interface SecureKeys : NSObject
 
@@ -74,5 +76,7 @@
 @property(readonly) SecKeyRef privateKey;
 
 - (NSString *)base64SignatureStringForMessage:(NSString *)message;
-- (BOOL)verifyBase64Signature:(NSString *)base64Signature forMessage:(NSString *)message;
+- (BOOL)verifyBase64Signature:(NSString * __nullable)base64Signature forMessage:(NSString * __nullable)message;
 @end
+
+NS_ASSUME_NONNULL_END

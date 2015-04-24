@@ -180,6 +180,10 @@
 }
 
 - (BOOL)verifyBase64Signature:(NSString *)base64Signature forMessage:(NSString *)message {
+    if (!base64Signature) {
+        return NO;
+    }
+    
     NSData *signature = [[NSData alloc ] initWithBase64EncodedString:base64Signature options:0];
     if (!signature) { 
         return NO;
