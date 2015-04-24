@@ -10,13 +10,26 @@ import XCTest
 
 class AuthorizationTests: XCTestCase {
 
-    func testAuthorization() {
+    func authorizationResult(corruptDate: time_t = 0, corruptID:String = "") -> Bool {
         var authorization = Authorization(
-              secureKeys: SecureKeys(),
-                  authId: "someone",
-                authDate: CurrentUnixTime()
+            secureKeys: SecureKeys(),
+            authId: "someone",
+            authDate: CurrentUnixTime()
         )
         let json: AnyObject = authorization.JSONObject
-        XCTAssert(authorization.from(JSONObject: json), "Signature should verify user")
+        authorization.authId += corruptID
+        authorization.authDate += corruptDate
+        return authorization.from(JSONObject: json)
     }
+    
+    func testAuthorizationVerificationPositive() {
+        XCTAssertTrue(authorizationResult(), "Signature should verify user")
+    }
+
+    func testAuthorizationVerificationNegative() {
+        XCTAssertFalse(authorizationResult(corruptDate: 1))
+        XCTAssertFalse(authorizationResult(corruptID: ", Jr."))
+        XCTAssertFalse(authorizationResult(corruptDate: 5, corruptID: ", Esq."))
+    }
+
 }
