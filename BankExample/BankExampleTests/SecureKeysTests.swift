@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 ilya n. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 class SecureKeysTests: XCTestCase {
@@ -37,7 +36,7 @@ class SecureKeysTests: XCTestCase {
 
     func testFalseSignature() {
         let signature = secureKeys.base64SignatureStringForMessage(testMessage + " else")
-        XCTAssert(!secureKeys.verifyBase64Signature(signature, forMessage: testMessage))
+        XCTAssertFalse(secureKeys.verifyBase64Signature(signature, forMessage: testMessage))
     }
 
 }

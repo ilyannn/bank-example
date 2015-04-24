@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Authorization: NSObject {
+struct Authorization {
     let secureKeys: SecureKeys
 
-    init(keys: SecureKeys) {
-         secureKeys = keys
-    }
-    
-    func toJSONObject() -> AnyObject {
+    var authId: String
+    var authDate: time_t
+    var authMessage: String { return authId + ":" + String(authDate) }
+
+    var JSONObject: AnyObject {
         return [
             "userId": authId,
               "date": authDate,
@@ -23,7 +23,7 @@ class Authorization: NSObject {
         ]
     }
     
-    func from(JSONObject: AnyObject) -> Bool {
+    mutating func from(#JSONObject: AnyObject) -> Bool {
         if let dict = JSONObject as? [String: AnyObject] {
             authId = dict["userId"] as? String ?? "" 
             authDate = (dict["date"] as? NSNumber ?? 0).integerValue
@@ -32,7 +32,4 @@ class Authorization: NSObject {
         return false
     }
     
-    var authId = ""
-    var authDate: time_t = 0
-    var authMessage: String { return authId + ":" + String(authDate) }
 }
