@@ -25,6 +25,7 @@
 		BAE93FF91AEA786E00397F41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF61AEA6B3600397F41 /* Network.swift */; };
 		BAE93FFA1AEA7A0B00397F41 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEF1AE9C39200397F41 /* Support.swift */; };
 		BAE93FFB1AEA7A1100397F41 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEF1AE9C39200397F41 /* Support.swift */; };
+		BAE93FFE1AEA80B600397F41 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FFD1AEA80B600397F41 /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BAE93FEF1AE9C39200397F41 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Support.swift; path = BankExample/Support.swift; sourceTree = "<group>"; };
 		BAE93FF11AEA5E7500397F41 /* AuthorizationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationOperation.swift; path = BankExample/AuthorizationOperation.swift; sourceTree = "<group>"; };
 		BAE93FF61AEA6B3600397F41 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BAE93FFD1AEA80B600397F41 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				BAE93FD51AE99D7700397F41 /* SecureKeysTests.swift */,
 				BAE93FEC1AE9C0DB00397F41 /* AuthorizationTests.swift */,
+				BAE93FFD1AEA80B600397F41 /* NetworkServiceTests.swift */,
 				BAE93FD31AE99D7700397F41 /* Supporting Files */,
 			);
 			path = BankExampleTests;
@@ -283,6 +286,7 @@
 			files = (
 				BAE93FFB1AEA7A1100397F41 /* Support.swift in Sources */,
 				BAE93FE51AE9A2EC00397F41 /* SecureKeys.m in Sources */,
+				BAE93FFE1AEA80B600397F41 /* NetworkServiceTests.swift in Sources */,
 				BAE93FED1AE9C0DB00397F41 /* AuthorizationTests.swift in Sources */,
 				BAE93FF41AEA5F2E00397F41 /* AuthorizationOperation.swift in Sources */,
 				BAE93FD61AE99D7700397F41 /* SecureKeysTests.swift in Sources */,
