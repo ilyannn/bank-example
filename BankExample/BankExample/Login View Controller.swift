@@ -50,6 +50,10 @@ extension LoginViewController: UITextFieldDelegate {
 // MARK: Core logic 
 extension LoginViewController {
     func performAuthorization() {
-        AuthorizationOperation(login: loginField.text, password: passwordField.text).start()
+        AuthorizationOperation(
+               login: loginField.text, 
+            password: passwordField.text, 
+              target: NetworkService.networkServiceFromSettings() 
+        ).start()
     }
 }

@@ -19,9 +19,12 @@
 		BAE93FEB1AE9B8FA00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */; };
 		BAE93FED1AE9C0DB00397F41 /* AuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEC1AE9C0DB00397F41 /* AuthorizationTests.swift */; };
 		BAE93FEE1AE9C0DF00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */; };
-		BAE93FF01AE9C39200397F41 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEF1AE9C39200397F41 /* Support.swift */; };
-		BAE93FF31AEA5F2D00397F41 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Operations.swift */; };
-		BAE93FF41AEA5F2E00397F41 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Operations.swift */; };
+		BAE93FF31AEA5F2D00397F41 /* AuthorizationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* AuthorizationOperation.swift */; };
+		BAE93FF41AEA5F2E00397F41 /* AuthorizationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* AuthorizationOperation.swift */; };
+		BAE93FF81AEA786900397F41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF61AEA6B3600397F41 /* Network.swift */; };
+		BAE93FF91AEA786E00397F41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF61AEA6B3600397F41 /* Network.swift */; };
+		BAE93FFA1AEA7A0B00397F41 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEF1AE9C39200397F41 /* Support.swift */; };
+		BAE93FFB1AEA7A1100397F41 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEF1AE9C39200397F41 /* Support.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,8 @@
 		BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authorization.swift; path = BankExample/Authorization.swift; sourceTree = "<group>"; };
 		BAE93FEC1AE9C0DB00397F41 /* AuthorizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTests.swift; sourceTree = "<group>"; };
 		BAE93FEF1AE9C39200397F41 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Support.swift; path = BankExample/Support.swift; sourceTree = "<group>"; };
-		BAE93FF11AEA5E7500397F41 /* Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operations.swift; path = BankExample/Operations.swift; sourceTree = "<group>"; };
+		BAE93FF11AEA5E7500397F41 /* AuthorizationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationOperation.swift; path = BankExample/AuthorizationOperation.swift; sourceTree = "<group>"; };
+		BAE93FF61AEA6B3600397F41 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,9 @@
 		BAE93FB11AE99D7700397F41 = {
 			isa = PBXGroup;
 			children = (
-				BAE93FE61AE9B05D00397F41 /* Authorization model */,
+				BAE93FE61AE9B05D00397F41 /* Security */,
+				BAE93FFC1AEA7A3100397F41 /* JSON Classes */,
+				BAE93FF51AEA6B1B00397F41 /* Operations */,
 				BAE93FBC1AE99D7700397F41 /* BankExample */,
 				BAE93FD21AE99D7700397F41 /* BankExampleTests */,
 				BAE93FBB1AE99D7700397F41 /* Products */,
@@ -132,17 +138,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BAE93FE61AE9B05D00397F41 /* Authorization model */ = {
+		BAE93FE61AE9B05D00397F41 /* Security */ = {
 			isa = PBXGroup;
 			children = (
 				BAE93FDF1AE99ECA00397F41 /* Security.swift */,
 				BAE93FE21AE99F3600397F41 /* SecureKeys.h */,
 				BAE93FE31AE99F3600397F41 /* SecureKeys.m */,
 				BAE93FEF1AE9C39200397F41 /* Support.swift */,
-				BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */,
-				BAE93FF11AEA5E7500397F41 /* Operations.swift */,
 			);
-			name = "Authorization model";
+			name = Security;
+			sourceTree = "<group>";
+		};
+		BAE93FF51AEA6B1B00397F41 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				BAE93FF11AEA5E7500397F41 /* AuthorizationOperation.swift */,
+				BAE93FF61AEA6B3600397F41 /* Network.swift */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+		BAE93FFC1AEA7A3100397F41 /* JSON Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */,
+			);
+			name = "JSON Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +269,10 @@
 				BAE93FC21AE99D7700397F41 /* Login View Controller.swift in Sources */,
 				BAE93FC01AE99D7700397F41 /* AppDelegate.swift in Sources */,
 				BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */,
-				BAE93FF31AEA5F2D00397F41 /* Operations.swift in Sources */,
+				BAE93FF31AEA5F2D00397F41 /* AuthorizationOperation.swift in Sources */,
 				BAE93FE01AE99ECA00397F41 /* Security.swift in Sources */,
+				BAE93FFA1AEA7A0B00397F41 /* Support.swift in Sources */,
+				BAE93FF81AEA786900397F41 /* Network.swift in Sources */,
 				BAE93FEB1AE9B8FA00397F41 /* Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,11 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE93FFB1AEA7A1100397F41 /* Support.swift in Sources */,
 				BAE93FE51AE9A2EC00397F41 /* SecureKeys.m in Sources */,
-				BAE93FF01AE9C39200397F41 /* Support.swift in Sources */,
 				BAE93FED1AE9C0DB00397F41 /* AuthorizationTests.swift in Sources */,
-				BAE93FF41AEA5F2E00397F41 /* Operations.swift in Sources */,
+				BAE93FF41AEA5F2E00397F41 /* AuthorizationOperation.swift in Sources */,
 				BAE93FD61AE99D7700397F41 /* SecureKeysTests.swift in Sources */,
+				BAE93FF91AEA786E00397F41 /* Network.swift in Sources */,
 				BAE93FEE1AE9C0DF00397F41 /* Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
