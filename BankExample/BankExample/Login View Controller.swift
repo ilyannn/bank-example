@@ -60,7 +60,7 @@ extension LoginViewController {
         AuthorizationOperation(
                login: loginField.text, 
             password: passwordField.text, 
-              target: settingsInformation.networkService()
+              target: settingsInformation.networkService
         ).start()        
     }
     

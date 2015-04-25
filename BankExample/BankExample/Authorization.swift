@@ -13,18 +13,20 @@ private let PrivateKeyData = NSData(contentsOfFile: SettingsInformation.keyFileP
 class AuthorizationOperation: NSOperation {
     let loginText: String
     let passwordText: String
-    let networkService: NetworkService
+    let networkServiceFactory: () -> NetworkService
     
-    init(login: String, password: String, target: NetworkService) {
+    init(login: String, password: String, target factory: () -> NetworkService) {
         loginText = login
         passwordText = password
-        networkService = target
+        networkServiceFactory = factory
     }
     
     override func main() {
         let message, title: String
-        
+
         if let decryptedKey = SecureKeys(data: PrivateKeyData, passphrase: passwordText) {
+
+            let networkService = networkServiceFactory()
             
             let object = Authorization(
                 secureKeys: decryptedKey,
