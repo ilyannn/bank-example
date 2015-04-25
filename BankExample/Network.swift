@@ -30,14 +30,13 @@ class MockNetworkService: NetworkService {
 /// These methods block, which they shouldn't do in the production app.
 class RealNetworkService {
     
-    let serverURL: NSURL
+    let serverURL: NSURL! // Optional to make writing an optional init easier.
     
     init? (server: String) {
         
-        if let URL = NSURL(string: server) {
-            serverURL = URL
-        } else {
-            serverURL = NSURL(string: "http://does-not-matter.com")!
+        serverURL = NSURL(string: server)
+        
+        if serverURL == nil {
             return nil
         }
     }
