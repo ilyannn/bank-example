@@ -8,13 +8,6 @@
 
 import Foundation
 
-class SettingsInformation {
-    class func networkService() -> NetworkService {
-        return MockNetworkService()
-        // TODO: generate real network service 
-    }
-}
-
 /// A production app should also handle errors.
 protocol NetworkService {
     func getServerDate() -> time_t     
