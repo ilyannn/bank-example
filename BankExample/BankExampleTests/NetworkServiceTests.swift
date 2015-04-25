@@ -44,13 +44,19 @@ class NetworkServiceTests: XCTestCase {
             let auth = AuthorizationTests.exampleAuthorization
             
             let expectation = expectationWithDescription("Wait for GitHub reply")
+
+            NSLog("I'm about to post this JSON: \(auth.JSONObject)")
             
             service.post(authorizationObject: auth) { success in
                 XCTAssertTrue(success, "For some reason, GitHub returns 200 OK")
                 expectation.fulfill()
             }
             
-            waitForExpectationsWithTimeout(20, handler: nil)
+            waitForExpectationsWithTimeout(20) { error in 
+                if let error = error {
+                    NSLog("test error: %@", error)
+                }
+            }
         }
     }
 }
