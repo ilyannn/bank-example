@@ -63,6 +63,8 @@
 		BAE93FFD1AEA80B600397F41 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		BAE93FFF1AEB7A1F00397F41 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = BankExample/Settings.swift; sourceTree = "<group>"; };
 		BAE940031AEB809A00397F41 /* gen.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = gen.py; sourceTree = "<group>"; };
+		BAE940041AEB849F00397F41 /* key */ = {isa = PBXFileReference; lastKnownFileType = text; path = key; sourceTree = "<group>"; };
+		BAE940051AEB849F00397F41 /* key.pub */ = {isa = PBXFileReference; lastKnownFileType = text; path = key.pub; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,7 @@
 		BAE93FB11AE99D7700397F41 = {
 			isa = PBXGroup;
 			children = (
-				BAE940021AEB806400397F41 /* Supporting Scripts */,
+				BAE940021AEB806400397F41 /* Key Generation */,
 				BAE93FE61AE9B05D00397F41 /* Security */,
 				BAE93FFC1AEA7A3100397F41 /* JSON Classes */,
 				BAE93FF51AEA6B1B00397F41 /* Operations */,
@@ -175,13 +177,16 @@
 			name = "JSON Classes";
 			sourceTree = "<group>";
 		};
-		BAE940021AEB806400397F41 /* Supporting Scripts */ = {
+		BAE940021AEB806400397F41 /* Key Generation */ = {
 			isa = PBXGroup;
 			children = (
 				BAE940031AEB809A00397F41 /* gen.py */,
+				BAE940041AEB849F00397F41 /* key */,
+				BAE940051AEB849F00397F41 /* key.pub */,
 			);
-			name = "Supporting Scripts";
-			sourceTree = "<group>";
+			name = "Key Generation";
+			path = ../TestKeys;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
