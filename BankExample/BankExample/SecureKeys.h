@@ -72,7 +72,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// Creates a test pair.
 - (instancetype)init;
 
-@property(readonly) SecKeyRef publicKey;
+/// Load private key from a file.
+- (id __nullable)initWithData:(NSData * __nonnull)data passphrase:(NSString *)passphrase;
+
+@property(readonly, nullable) SecKeyRef publicKey;
 @property(readonly) SecKeyRef privateKey;
 
 - (NSString *)base64SignatureStringForMessage:(NSString *)message;

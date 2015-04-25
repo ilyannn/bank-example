@@ -39,4 +39,15 @@ class SecureKeysTests: XCTestCase {
         XCTAssertFalse(secureKeys.verifyBase64Signature(signature, forMessage: testMessage))
     }
 
+    func testImportKey() {
+        let path = NSBundle.mainBundle().pathForResource("key", ofType: "pfx")
+        XCTAssertNotNil(path, "Can't get the resource")
+        if let path = path {
+            let data = NSData(contentsOfFile: path)
+            XCTAssertNotNil(data, "Can't open the resource")
+            if let data = data {
+                XCTAssertNotNil(SecureKeys(data: data, passphrase: "xxx"))
+            }
+        }
+    }
 }

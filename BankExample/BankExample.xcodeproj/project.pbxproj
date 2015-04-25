@@ -28,7 +28,7 @@
 		BAE93FFE1AEA80B600397F41 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FFD1AEA80B600397F41 /* NetworkServiceTests.swift */; };
 		BAE940001AEB7A1F00397F41 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FFF1AEB7A1F00397F41 /* Settings.swift */; };
 		BAE940011AEB7A2D00397F41 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FFF1AEB7A1F00397F41 /* Settings.swift */; };
-		BAE940071AEB8E5200397F41 /* key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = BAE940061AEB8E4F00397F41 /* key.p12 */; };
+		BAE9400A1AEC22CD00397F41 /* key.pfx in Resources */ = {isa = PBXBuildFile; fileRef = BAE940091AEC22CD00397F41 /* key.pfx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +63,10 @@
 		BAE93FF61AEA6B3600397F41 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = BankExample/Network.swift; sourceTree = "<group>"; };
 		BAE93FFD1AEA80B600397F41 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		BAE93FFF1AEB7A1F00397F41 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = BankExample/Settings.swift; sourceTree = "<group>"; };
-		BAE940031AEB809A00397F41 /* gen.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = gen.py; sourceTree = "<group>"; };
 		BAE940041AEB849F00397F41 /* key */ = {isa = PBXFileReference; lastKnownFileType = text; path = key; sourceTree = "<group>"; };
 		BAE940051AEB849F00397F41 /* key.pub */ = {isa = PBXFileReference; lastKnownFileType = text; path = key.pub; sourceTree = "<group>"; };
-		BAE940061AEB8E4F00397F41 /* key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = key.p12; sourceTree = "<group>"; };
 		BAE940081AEB8E6400397F41 /* gen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = gen.sh; sourceTree = "<group>"; };
+		BAE940091AEC22CD00397F41 /* key.pfx */ = {isa = PBXFileReference; lastKnownFileType = file; path = key.pfx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,10 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				BAE940081AEB8E6400397F41 /* gen.sh */,
-				BAE940031AEB809A00397F41 /* gen.py */,
 				BAE940041AEB849F00397F41 /* key */,
 				BAE940051AEB849F00397F41 /* key.pub */,
-				BAE940061AEB8E4F00397F41 /* key.p12 */,
+				BAE940091AEC22CD00397F41 /* key.pfx */,
 			);
 			name = "Key Generation";
 			path = ../TestKeys;
@@ -273,8 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE9400A1AEC22CD00397F41 /* key.pfx in Resources */,
 				BAE93FC51AE99D7700397F41 /* Main.storyboard in Resources */,
-				BAE940071AEB8E5200397F41 /* key.p12 in Resources */,
 				BAE93FCA1AE99D7700397F41 /* LaunchScreen.xib in Resources */,
 				BAE93FC71AE99D7700397F41 /* Images.xcassets in Resources */,
 			);

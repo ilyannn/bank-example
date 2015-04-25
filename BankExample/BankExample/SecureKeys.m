@@ -146,8 +146,6 @@
 // MARK: - Our wrappers
 - (instancetype)init {
     if (self = [super init]) {
-        SecKeyRef publicKey = NULL;
-        SecKeyRef privateKey = NULL;
         
         NSDictionary *keyPairAttr = @{ 
                       (__bridge id)kSecAttrKeyType: (__bridge id)kSecAttrKeyTypeRSA, 
@@ -157,15 +155,36 @@
         MUST_NOT_FAIL(@"Cannot generate a key pair", 
                 SecKeyGeneratePair(
                                    (__bridge CFDictionaryRef)keyPairAttr, 
-                                   &publicKey, 
-                                   &privateKey
+                                   &_publicKey, 
+                                   &_privateKey
                                    )
                 )
-
-        _privateKey = privateKey;
-        _publicKey = publicKey;
     }
     return self;
+}
+
+- (id __nullable)initWithData:(NSData * __nonnull)data passphrase:(NSString *)passphrase {
+    if (self = [super init]) {
+        NSMutableDictionary *options = [NSMutableDictionary new];
+        options[(__bridge id)kSecImportExportPassphrase] = passphrase;
+        CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
+        
+        OSStatus securityError = SecPKCS12Import((__bridge CFDataRef)data,
+                                                 (__bridge CFDictionaryRef)options, 
+                                                 &items);
+        
+        if (noErr != securityError || CFArrayGetCount(items) == 0) {
+            return nil;
+        }
+        
+        CFDictionaryRef identityDict = CFArrayGetValueAtIndex(items, 0);
+        SecIdentityRef identityApp =
+        (SecIdentityRef)CFDictionaryGetValue(identityDict, kSecImportItemIdentity);
+        
+        SecIdentityCopyPrivateKey(identityApp, &_privateKey);
+    }
+    return self;
+    
 }
 
 - (void)dealloc {
