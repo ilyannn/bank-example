@@ -34,12 +34,12 @@ class AuthorizationOperation: NSOperation {
             
             let success = networkService.post(authorizationObject: object)            
 
-            title = "Netwwork Result"
-            message = success ? "Successfully authorized" : "Please try again"
+            title = "Network Result"
+            message = success ? "Successfully authorized." : "Authorization did not succeed. Please try again using different credentials."
 
         } else {
-            title = "Incorrect password"
-            message = "We were not able to decrypt the certificate file using the provided password. Please try again"
+            title = "Incorrect Password"
+            message = "We were unable to decrypt the certificate file. Please try again using a different passphrase."
         }
 
         UIAlertView(  title: title, 
