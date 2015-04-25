@@ -44,8 +44,10 @@ extension LoginViewController: UITextFieldDelegate {
     }
 
     @IBAction func proceedWithForm(sender: AnyObject) {
-        passwordField.resignFirstResponder()
         performAuthorization()
+        
+        loginField.resignFirstResponder()
+        passwordField.resignFirstResponder()
         passwordField.text = ""
     }    
 }
