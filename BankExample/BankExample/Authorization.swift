@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let PrivateKeyData = NSData(contentsOfFile: SettingsInformation.keyFilePath())!
+
 class AuthorizationOperation: NSOperation {
     let loginText: String
     let passwordText: String
@@ -20,16 +22,28 @@ class AuthorizationOperation: NSOperation {
     }
     
     override func main() {
-        let object = Authorization(
-            secureKeys: SecureKeys(),  // TODO: retrieve the keys
-                authId: loginText,
-              authDate: networkService.getServerDate()
-        )
+        let message, title: String
         
-        let success = networkService.post(authorizationObject: object)
+        if let decryptedKey = SecureKeys(data: PrivateKeyData, passphrase: passwordText) {
             
-        UIAlertView(  title: "Authorization", 
-                    message: success ? "Successfully authorized" : "Please try again", 
+            let object = Authorization(
+                secureKeys: decryptedKey,
+                    authId: loginText,
+                  authDate: networkService.getServerDate()
+            )
+            
+            let success = networkService.post(authorizationObject: object)            
+
+            title = "Netwwork Result"
+            message = success ? "Successfully authorized" : "Please try again"
+
+        } else {
+            title = "Incorrect password"
+            message = "We were not able to decrypt the certificate file using the provided password. Please try again"
+        }
+
+        UIAlertView(  title: title, 
+                    message: message, 
                    delegate: nil, 
           cancelButtonTitle: "Got It"
         ).show()
