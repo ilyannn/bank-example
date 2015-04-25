@@ -8,31 +8,27 @@
 
 import Foundation
 
-/// A production app should also handle errors.
-class NetworkService {
-    
-    class func networkServiceFromSettings() -> NetworkService {
+class SettingsInformation {
+    class func networkService() -> NetworkService {
         return MockNetworkService()
         // TODO: generate real network service 
     }
-    
-    func getServerDate() -> time_t {
-        fatalError("abstract method")
-    }
-    
-    func post(authorizationObject object: Authorization) -> Bool {
-        fatalError("abstract method")
-    }
+}
+
+/// A production app should also handle errors.
+protocol NetworkService {
+    func getServerDate() -> time_t     
+    func post(authorizationObject object: Authorization) -> Bool 
 }
 
 class MockNetworkService: NetworkService {
     let TimeError: time_t = 100
     
-    override func getServerDate() -> time_t {
+    func getServerDate() -> time_t {
         return CurrentUnixTime() + time_t(arc4random_uniform(UInt32(TimeError))) - TimeError/2
     }
     
-    override func post(authorizationObject object: Authorization) -> Bool {
+    func post(authorizationObject object: Authorization) -> Bool {
         // How to test with the mock service?
         return arc4random_uniform(2) == 0
     }
