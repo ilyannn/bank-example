@@ -44,19 +44,20 @@ extension LoginViewController: UITextFieldDelegate {
     @IBAction func proceedWithForm(sender: AnyObject) {
         passwordField.resignFirstResponder()
         performAuthorization()
+        passwordField.text = ""
     }    
 }
 
 // MARK: Core logic 
 extension LoginViewController {
+    
     func performAuthorization() {
-        let password = passwordField.text
-        passwordField.text = ""
-        
+
         AuthorizationOperation(
                login: loginField.text, 
-            password: password, 
+            password: passwordField.text, 
               target: SettingsInformation.networkService()
-        ).start()
+        ).start()        
     }
+    
 }
