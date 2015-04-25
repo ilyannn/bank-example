@@ -23,7 +23,7 @@ class MockNetworkService: NetworkService {
     
     func post(authorizationObject object: Authorization, callback: (Bool) -> ()) {
         // How to test with the mock service?
-        callback(arc4random_uniform(2) == 0)
+        callback(object.authId == "mock")
     }
 }
 
