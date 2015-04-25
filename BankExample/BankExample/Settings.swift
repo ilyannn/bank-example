@@ -13,4 +13,8 @@ class SettingsInformation {
         return MockNetworkService()
         // TODO: generate real network service 
     }
+    
+    class func keyFilePath() -> String! {
+        return NSBundle.mainBundle().pathForResource("key", ofType: "pfx")
+    }
 }
