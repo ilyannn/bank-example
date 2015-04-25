@@ -49,6 +49,7 @@ extension LoginViewController: UITextFieldDelegate {
         loginField.resignFirstResponder()
         passwordField.resignFirstResponder()
         passwordField.text = ""
+        updateControlAppearance()
     }    
 }
 
