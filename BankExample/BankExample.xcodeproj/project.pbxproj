@@ -13,7 +13,6 @@
 		BAE93FC71AE99D7700397F41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE93FC61AE99D7700397F41 /* Images.xcassets */; };
 		BAE93FCA1AE99D7700397F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE93FC81AE99D7700397F41 /* LaunchScreen.xib */; };
 		BAE93FD61AE99D7700397F41 /* SecureKeysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FD51AE99D7700397F41 /* SecureKeysTests.swift */; };
-		BAE93FE01AE99ECA00397F41 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FDF1AE99ECA00397F41 /* Security.swift */; };
 		BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FE31AE99F3600397F41 /* SecureKeys.m */; };
 		BAE93FE51AE9A2EC00397F41 /* SecureKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FE31AE99F3600397F41 /* SecureKeys.m */; };
 		BAE93FEB1AE9B8FA00397F41 /* Authorization Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization Object.swift */; };
@@ -52,7 +51,6 @@
 		BAE93FCF1AE99D7700397F41 /* BankExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE93FD41AE99D7700397F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE93FD51AE99D7700397F41 /* SecureKeysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureKeysTests.swift; sourceTree = "<group>"; };
-		BAE93FDF1AE99ECA00397F41 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Security.swift; path = BankExample/Security.swift; sourceTree = "<group>"; };
 		BAE93FE11AE99F3600397F41 /* BankExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		BAE93FE21AE99F3600397F41 /* SecureKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecureKeys.h; path = BankExample/SecureKeys.h; sourceTree = "<group>"; };
 		BAE93FE31AE99F3600397F41 /* SecureKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecureKeys.m; path = BankExample/SecureKeys.m; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 		BAE93FE61AE9B05D00397F41 /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				BAE93FDF1AE99ECA00397F41 /* Security.swift */,
 				BAE93FE21AE99F3600397F41 /* SecureKeys.h */,
 				BAE93FE31AE99F3600397F41 /* SecureKeys.m */,
 				BAE93FEF1AE9C39200397F41 /* Support.swift */,
@@ -296,7 +293,6 @@
 				BAE93FC01AE99D7700397F41 /* AppDelegate.swift in Sources */,
 				BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */,
 				BAE93FF31AEA5F2D00397F41 /* Authorization.swift in Sources */,
-				BAE93FE01AE99ECA00397F41 /* Security.swift in Sources */,
 				BAE93FFA1AEA7A0B00397F41 /* Support.swift in Sources */,
 				BAE940011AEB7A2D00397F41 /* Settings.swift in Sources */,
 				BAE93FF81AEA786900397F41 /* Network.swift in Sources */,
