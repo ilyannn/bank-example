@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var okButton: UIButton!
     
+    let settingsInformation = SettingsInformation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateControlAppearance()
@@ -56,7 +58,7 @@ extension LoginViewController {
         AuthorizationOperation(
                login: loginField.text, 
             password: passwordField.text, 
-              target: SettingsInformation.networkService()
+              target: settingsInformation.networkService()
         ).start()        
     }
     
