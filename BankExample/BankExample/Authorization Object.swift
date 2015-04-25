@@ -18,7 +18,7 @@ struct Authorization {
     // Computed properties
     var authMessage: String { return authId + ":" + String(authDate) }
 
-    var JSONObject: AnyObject {
+    var JSONObject: [String: AnyObject] {
         return [
             "userId": authId,
               "date": authDate,

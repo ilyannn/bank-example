@@ -22,8 +22,9 @@ class AuthorizationOperation: NSOperation {
     }
     
     override func main() {
-        let message, title: String
-
+        let alert = UIAlertView()
+        alert.addButtonWithTitle("Got It")
+        
         if let decryptedKey = SecureKeys(data: PrivateKeyData, passphrase: passwordText) {
 
             let networkService = networkServiceFactory()
@@ -34,20 +35,20 @@ class AuthorizationOperation: NSOperation {
                   authDate: networkService.getServerDate()
             )
             
-            let success = networkService.post(authorizationObject: object)            
-
-            title = "Network Result"
-            message = success ? "Successfully authorized." : "Authorization did not succeed. Please try again using different credentials."
+            networkService.post(authorizationObject: object)  { success in
+                
+                alert.title = "Network Result"
+                alert.message = success ? "Successfully authorized." 
+                                : "Authorization did not succeed. Please try again using different credentials."
+                
+                alert.show()
+            }
 
         } else {
-            title = "Incorrect Password"
-            message = "We were unable to decrypt the certificate file. Please try again using a different passphrase."
+            alert.title = "Incorrect Password"
+            alert.message = "We were unable to decrypt the certificate file. Please try again using a different passphrase."
+            alert.show()
         }
 
-        UIAlertView(  title: title, 
-                    message: message, 
-                   delegate: nil, 
-          cancelButtonTitle: "Got It"
-        ).show()
     }
 }
