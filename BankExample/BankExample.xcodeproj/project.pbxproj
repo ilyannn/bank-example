@@ -29,6 +29,8 @@
 		BAE940011AEB7A2D00397F41 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FFF1AEB7A1F00397F41 /* Settings.swift */; };
 		BAE9400A1AEC22CD00397F41 /* key.pfx in Resources */ = {isa = PBXBuildFile; fileRef = BAE940091AEC22CD00397F41 /* key.pfx */; };
 		BAE9400C1AEC307F00397F41 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BAE9400B1AEC307F00397F41 /* Settings.bundle */; };
+		BAE940111AEC3DAB00397F41 /* login in Resources */ = {isa = PBXBuildFile; fileRef = BAE9400F1AEC3DAB00397F41 /* login */; };
+		BAE940121AEC3DAB00397F41 /* now in Resources */ = {isa = PBXBuildFile; fileRef = BAE940101AEC3DAB00397F41 /* now */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		BAE940081AEB8E6400397F41 /* gen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = gen.sh; sourceTree = "<group>"; };
 		BAE940091AEC22CD00397F41 /* key.pfx */ = {isa = PBXFileReference; lastKnownFileType = file; path = key.pfx; sourceTree = "<group>"; };
 		BAE9400B1AEC307F00397F41 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BAE9400F1AEC3DAB00397F41 /* login */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = login; path = api/login; sourceTree = "<group>"; };
+		BAE940101AEC3DAB00397F41 /* now */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = now; path = api/now; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +94,11 @@
 		BAE93FB11AE99D7700397F41 = {
 			isa = PBXGroup;
 			children = (
-				BAE940021AEB806400397F41 /* Key Generation */,
+				BAE9400D1AEC3D2000397F41 /* Quality Assurance */,
 				BAE93FE61AE9B05D00397F41 /* Security */,
 				BAE93FFC1AEA7A3100397F41 /* JSON Classes */,
 				BAE93FF51AEA6B1B00397F41 /* Operations */,
 				BAE93FBC1AE99D7700397F41 /* BankExample */,
-				BAE93FD21AE99D7700397F41 /* BankExampleTests */,
 				BAE93FBB1AE99D7700397F41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -179,7 +182,7 @@
 			name = "JSON Classes";
 			sourceTree = "<group>";
 		};
-		BAE940021AEB806400397F41 /* Key Generation */ = {
+		BAE940021AEB806400397F41 /* Test Keys */ = {
 			isa = PBXGroup;
 			children = (
 				BAE940081AEB8E6400397F41 /* gen.sh */,
@@ -187,9 +190,29 @@
 				BAE940051AEB849F00397F41 /* key.pub */,
 				BAE940091AEC22CD00397F41 /* key.pfx */,
 			);
-			name = "Key Generation";
+			name = "Test Keys";
 			path = ../TestKeys;
 			sourceTree = SOURCE_ROOT;
+		};
+		BAE9400D1AEC3D2000397F41 /* Quality Assurance */ = {
+			isa = PBXGroup;
+			children = (
+				BAE940021AEB806400397F41 /* Test Keys */,
+				BAE9400E1AEC3D4000397F41 /* Test Service */,
+				BAE93FD21AE99D7700397F41 /* BankExampleTests */,
+			);
+			name = "Quality Assurance";
+			sourceTree = "<group>";
+		};
+		BAE9400E1AEC3D4000397F41 /* Test Service */ = {
+			isa = PBXGroup;
+			children = (
+				BAE940101AEC3DAB00397F41 /* now */,
+				BAE9400F1AEC3DAB00397F41 /* login */,
+			);
+			name = "Test Service";
+			path = ../TestService;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -271,8 +294,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE940111AEC3DAB00397F41 /* login in Resources */,
 				BAE9400A1AEC22CD00397F41 /* key.pfx in Resources */,
 				BAE93FC51AE99D7700397F41 /* Main.storyboard in Resources */,
+				BAE940121AEC3DAB00397F41 /* now in Resources */,
 				BAE9400C1AEC307F00397F41 /* Settings.bundle in Resources */,
 				BAE93FCA1AE99D7700397F41 /* LaunchScreen.xib in Resources */,
 				BAE93FC71AE99D7700397F41 /* Images.xcassets in Resources */,

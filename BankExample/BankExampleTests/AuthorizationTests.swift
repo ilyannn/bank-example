@@ -17,22 +17,18 @@ class AuthorizationTests: XCTestCase {
             authDate: CurrentUnixTime()
         )
          
-        if var json = authorization.JSONObject as? [String: AnyObject] {
+        var json = authorization.JSONObject
             
-            if let userID = json["userId"] as? String {
-                json["userId"] = userID + corruptID
-            }
-            
-            if let authDate = json["date"] as? NSNumber {
-                json["date"] = authDate.integerValue + corruptDate
-            }
-            
-            return authorization.from(JSONObject: json)
-            
-        } else {
-            // Incorrect JSON format.
-            return false
+        if let userID = json["userId"] as? String {
+            json["userId"] = userID + corruptID
         }
+        
+        if let authDate = json["date"] as? NSNumber {
+            json["date"] = authDate.integerValue + corruptDate
+        }
+        
+        return authorization.from(JSONObject: json)
+        
     }
     
     func testAuthorizationVerificationPositive() {

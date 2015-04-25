@@ -20,4 +20,5 @@ class NetworkServiceTests: XCTestCase {
         let service = RealNetworkService(server: "example.com")
         XCTAssertNotNil(service)
     }
+    
 }
