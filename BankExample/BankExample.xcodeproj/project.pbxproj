@@ -239,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAE93FD91AE99D7700397F41 /* Build configuration list for PBXNativeTarget "BankExample" */;
 			buildPhases = (
+				BAE9401D1AED54D700397F41 /* ShellScript */,
 				BAE93FB61AE99D7700397F41 /* Sources */,
 				BAE93FB71AE99D7700397F41 /* Frameworks */,
 				BAE93FB81AE99D7700397F41 /* Resources */,
@@ -332,6 +333,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BAE9401D1AED54D700397F41 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BankExample\npython ./generate.py Authorization";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BAE93FB61AE99D7700397F41 /* Sources */ = {
