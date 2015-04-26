@@ -8,16 +8,19 @@
 
 import XCTest
 
-class AuthorizationTests: XCTestCase {
-
-    static let exampleAuthorization =  Authorization(
-            secureKeys: SecureKeys(),
-                authId: "someone",
-              authDate: CurrentUnixTime()
+func ExampleAuthorizationFactory() -> Authorization {  
+    
+    return Authorization(
+        secureKeys: SecureKeys(),
+            authId: "someone",
+          authDate: CurrentUnixTime()
     )
+}
+
+class AuthorizationTests: XCTestCase {
     
     func authorizationResult(corruptDate: time_t = 0, corruptID:String = "") -> Bool {
-        var authorization = self.dynamicType.exampleAuthorization
+        var authorization = ExampleAuthorizationFactory()
          
         var json = authorization.JSONObject
             

@@ -203,7 +203,7 @@
         return NO;
     }
     
-    NSData *signature = [[NSData alloc ] initWithBase64EncodedString:base64Signature options:0];
+    NSData *signature = [[NSData alloc] initWithBase64EncodedString:base64Signature options:0];
     if (!signature) { 
         return NO;
     }

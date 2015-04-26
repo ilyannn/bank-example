@@ -15,11 +15,11 @@
 		BAE93FD61AE99D7700397F41 /* SecureKeysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FD51AE99D7700397F41 /* SecureKeysTests.swift */; };
 		BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FE31AE99F3600397F41 /* SecureKeys.m */; };
 		BAE93FE51AE9A2EC00397F41 /* SecureKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FE31AE99F3600397F41 /* SecureKeys.m */; };
-		BAE93FEB1AE9B8FA00397F41 /* Authorization Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization Object.swift */; };
+		BAE93FEB1AE9B8FA00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */; };
 		BAE93FED1AE9C0DB00397F41 /* AuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEC1AE9C0DB00397F41 /* AuthorizationTests.swift */; };
-		BAE93FEE1AE9C0DF00397F41 /* Authorization Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization Object.swift */; };
-		BAE93FF31AEA5F2D00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Authorization.swift */; };
-		BAE93FF41AEA5F2E00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Authorization.swift */; };
+		BAE93FEE1AE9C0DF00397F41 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */; };
+		BAE93FF31AEA5F2D00397F41 /* Authorization Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Authorization Operation.swift */; };
+		BAE93FF41AEA5F2E00397F41 /* Authorization Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF11AEA5E7500397F41 /* Authorization Operation.swift */; };
 		BAE93FF81AEA786900397F41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF61AEA6B3600397F41 /* Network.swift */; };
 		BAE93FF91AEA786E00397F41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FF61AEA6B3600397F41 /* Network.swift */; };
 		BAE93FFA1AEA7A0B00397F41 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE93FEF1AE9C39200397F41 /* Support.swift */; };
@@ -31,6 +31,10 @@
 		BAE9400C1AEC307F00397F41 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BAE9400B1AEC307F00397F41 /* Settings.bundle */; };
 		BAE940111AEC3DAB00397F41 /* login in Resources */ = {isa = PBXBuildFile; fileRef = BAE9400F1AEC3DAB00397F41 /* login */; };
 		BAE940121AEC3DAB00397F41 /* now in Resources */ = {isa = PBXBuildFile; fileRef = BAE940101AEC3DAB00397F41 /* now */; };
+		BAE940141AECF7F100397F41 /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE940131AECF7F100397F41 /* Generated.swift */; };
+		BAE940151AECF80B00397F41 /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE940131AECF7F100397F41 /* Generated.swift */; };
+		BAE940191AECFA1E00397F41 /* json.schema in Resources */ = {isa = PBXBuildFile; fileRef = BAE940181AECFA1E00397F41 /* json.schema */; };
+		BAE9401C1AECFB9400397F41 /* generate.py in Resources */ = {isa = PBXBuildFile; fileRef = BAE9401B1AECFB9400397F41 /* generate.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +61,10 @@
 		BAE93FE11AE99F3600397F41 /* BankExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		BAE93FE21AE99F3600397F41 /* SecureKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecureKeys.h; path = BankExample/SecureKeys.h; sourceTree = "<group>"; };
 		BAE93FE31AE99F3600397F41 /* SecureKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecureKeys.m; path = BankExample/SecureKeys.m; sourceTree = "<group>"; };
-		BAE93FEA1AE9B8FA00397F41 /* Authorization Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Authorization Object.swift"; path = "BankExample/Authorization Object.swift"; sourceTree = "<group>"; };
+		BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authorization.swift; path = BankExample/Authorization.swift; sourceTree = "<group>"; };
 		BAE93FEC1AE9C0DB00397F41 /* AuthorizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTests.swift; sourceTree = "<group>"; };
 		BAE93FEF1AE9C39200397F41 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Support.swift; path = BankExample/Support.swift; sourceTree = "<group>"; };
-		BAE93FF11AEA5E7500397F41 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authorization.swift; path = BankExample/Authorization.swift; sourceTree = "<group>"; };
+		BAE93FF11AEA5E7500397F41 /* Authorization Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Authorization Operation.swift"; path = "BankExample/Authorization Operation.swift"; sourceTree = "<group>"; };
 		BAE93FF61AEA6B3600397F41 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = BankExample/Network.swift; sourceTree = "<group>"; };
 		BAE93FFD1AEA80B600397F41 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		BAE93FFF1AEB7A1F00397F41 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = BankExample/Settings.swift; sourceTree = "<group>"; };
@@ -71,6 +75,9 @@
 		BAE9400B1AEC307F00397F41 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BAE9400F1AEC3DAB00397F41 /* login */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = login; path = api/login; sourceTree = "<group>"; };
 		BAE940101AEC3DAB00397F41 /* now */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = now; path = api/now; sourceTree = "<group>"; };
+		BAE940131AECF7F100397F41 /* Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Generated.swift; path = BankExample/Generated.swift; sourceTree = "<group>"; };
+		BAE940181AECFA1E00397F41 /* json.schema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.schema; path = BankExample/json.schema; sourceTree = "<group>"; };
+		BAE9401B1AECFB9400397F41 /* generate.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = generate.py; path = BankExample/generate.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +103,7 @@
 			children = (
 				BAE9400D1AEC3D2000397F41 /* Quality Assurance */,
 				BAE93FE61AE9B05D00397F41 /* Security */,
+				BAE9401A1AECFB6900397F41 /* Generate */,
 				BAE93FFC1AEA7A3100397F41 /* JSON Classes */,
 				BAE93FF51AEA6B1B00397F41 /* Operations */,
 				BAE93FBC1AE99D7700397F41 /* BankExample */,
@@ -167,7 +175,7 @@
 		BAE93FF51AEA6B1B00397F41 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				BAE93FF11AEA5E7500397F41 /* Authorization.swift */,
+				BAE93FF11AEA5E7500397F41 /* Authorization Operation.swift */,
 				BAE93FF61AEA6B3600397F41 /* Network.swift */,
 				BAE93FFF1AEB7A1F00397F41 /* Settings.swift */,
 			);
@@ -177,7 +185,8 @@
 		BAE93FFC1AEA7A3100397F41 /* JSON Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BAE93FEA1AE9B8FA00397F41 /* Authorization Object.swift */,
+				BAE940181AECFA1E00397F41 /* json.schema */,
+				BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */,
 			);
 			name = "JSON Classes";
 			sourceTree = "<group>";
@@ -212,6 +221,15 @@
 			);
 			name = "Test Service";
 			path = ../TestService;
+			sourceTree = "<group>";
+		};
+		BAE9401A1AECFB6900397F41 /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9401B1AECFB9400397F41 /* generate.py */,
+				BAE940131AECF7F100397F41 /* Generated.swift */,
+			);
+			name = Generate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +316,11 @@
 				BAE9400A1AEC22CD00397F41 /* key.pfx in Resources */,
 				BAE93FC51AE99D7700397F41 /* Main.storyboard in Resources */,
 				BAE940121AEC3DAB00397F41 /* now in Resources */,
+				BAE940191AECFA1E00397F41 /* json.schema in Resources */,
 				BAE9400C1AEC307F00397F41 /* Settings.bundle in Resources */,
 				BAE93FCA1AE99D7700397F41 /* LaunchScreen.xib in Resources */,
 				BAE93FC71AE99D7700397F41 /* Images.xcassets in Resources */,
+				BAE9401C1AECFB9400397F41 /* generate.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +341,12 @@
 				BAE93FC21AE99D7700397F41 /* Login View Controller.swift in Sources */,
 				BAE93FC01AE99D7700397F41 /* AppDelegate.swift in Sources */,
 				BAE93FE41AE99F3600397F41 /* SecureKeys.m in Sources */,
-				BAE93FF31AEA5F2D00397F41 /* Authorization.swift in Sources */,
+				BAE93FF31AEA5F2D00397F41 /* Authorization Operation.swift in Sources */,
+				BAE940141AECF7F100397F41 /* Generated.swift in Sources */,
 				BAE93FFA1AEA7A0B00397F41 /* Support.swift in Sources */,
 				BAE940011AEB7A2D00397F41 /* Settings.swift in Sources */,
 				BAE93FF81AEA786900397F41 /* Network.swift in Sources */,
-				BAE93FEB1AE9B8FA00397F41 /* Authorization Object.swift in Sources */,
+				BAE93FEB1AE9B8FA00397F41 /* Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,12 +357,13 @@
 				BAE93FFB1AEA7A1100397F41 /* Support.swift in Sources */,
 				BAE93FE51AE9A2EC00397F41 /* SecureKeys.m in Sources */,
 				BAE93FFE1AEA80B600397F41 /* NetworkServiceTests.swift in Sources */,
+				BAE940151AECF80B00397F41 /* Generated.swift in Sources */,
 				BAE93FED1AE9C0DB00397F41 /* AuthorizationTests.swift in Sources */,
-				BAE93FF41AEA5F2E00397F41 /* Authorization.swift in Sources */,
+				BAE93FF41AEA5F2E00397F41 /* Authorization Operation.swift in Sources */,
 				BAE93FD61AE99D7700397F41 /* SecureKeysTests.swift in Sources */,
 				BAE940001AEB7A1F00397F41 /* Settings.swift in Sources */,
 				BAE93FF91AEA786E00397F41 /* Network.swift in Sources */,
-				BAE93FEE1AE9C0DF00397F41 /* Authorization Object.swift in Sources */,
+				BAE93FEE1AE9C0DF00397F41 /* Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

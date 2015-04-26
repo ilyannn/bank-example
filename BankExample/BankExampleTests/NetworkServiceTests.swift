@@ -41,8 +41,8 @@ class NetworkServiceTests: XCTestCase {
     func testRealServiceLogin() {
         
         if let service = realService {
-            let auth = AuthorizationTests.exampleAuthorization
             
+            let auth = ExampleAuthorizationFactory()            
             let expectation = expectationWithDescription("Wait for GitHub reply")
 
             NSLog("I'm about to post this JSON: \(auth.JSONObject)")
