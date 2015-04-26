@@ -33,7 +33,7 @@
 		BAE940121AEC3DAB00397F41 /* now in Resources */ = {isa = PBXBuildFile; fileRef = BAE940101AEC3DAB00397F41 /* now */; };
 		BAE940141AECF7F100397F41 /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE940131AECF7F100397F41 /* Generated.swift */; };
 		BAE940151AECF80B00397F41 /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE940131AECF7F100397F41 /* Generated.swift */; };
-		BAE940191AECFA1E00397F41 /* json.schema in Resources */ = {isa = PBXBuildFile; fileRef = BAE940181AECFA1E00397F41 /* json.schema */; };
+		BAE940191AECFA1E00397F41 /* Authorization.schema in Resources */ = {isa = PBXBuildFile; fileRef = BAE940181AECFA1E00397F41 /* Authorization.schema */; };
 		BAE9401C1AECFB9400397F41 /* generate.py in Resources */ = {isa = PBXBuildFile; fileRef = BAE9401B1AECFB9400397F41 /* generate.py */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +76,7 @@
 		BAE9400F1AEC3DAB00397F41 /* login */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = login; path = api/login; sourceTree = "<group>"; };
 		BAE940101AEC3DAB00397F41 /* now */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = now; path = api/now; sourceTree = "<group>"; };
 		BAE940131AECF7F100397F41 /* Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Generated.swift; path = BankExample/Generated.swift; sourceTree = "<group>"; };
-		BAE940181AECFA1E00397F41 /* json.schema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.schema; path = BankExample/json.schema; sourceTree = "<group>"; };
+		BAE940181AECFA1E00397F41 /* Authorization.schema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Authorization.schema; path = BankExample/Authorization.schema; sourceTree = "<group>"; };
 		BAE9401B1AECFB9400397F41 /* generate.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = generate.py; path = BankExample/generate.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,7 +185,7 @@
 		BAE93FFC1AEA7A3100397F41 /* JSON Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BAE940181AECFA1E00397F41 /* json.schema */,
+				BAE940181AECFA1E00397F41 /* Authorization.schema */,
 				BAE93FEA1AE9B8FA00397F41 /* Authorization.swift */,
 			);
 			name = "JSON Classes";
@@ -316,7 +316,7 @@
 				BAE9400A1AEC22CD00397F41 /* key.pfx in Resources */,
 				BAE93FC51AE99D7700397F41 /* Main.storyboard in Resources */,
 				BAE940121AEC3DAB00397F41 /* now in Resources */,
-				BAE940191AECFA1E00397F41 /* json.schema in Resources */,
+				BAE940191AECFA1E00397F41 /* Authorization.schema in Resources */,
 				BAE9400C1AEC307F00397F41 /* Settings.bundle in Resources */,
 				BAE93FCA1AE99D7700397F41 /* LaunchScreen.xib in Resources */,
 				BAE93FC71AE99D7700397F41 /* Images.xcassets in Resources */,

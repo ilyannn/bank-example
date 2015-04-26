@@ -1,5 +1,3 @@
-Authorization = 
   userId: string
     date: int
    proof: string
-

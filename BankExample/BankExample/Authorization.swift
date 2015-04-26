@@ -26,20 +26,20 @@ class Authorization_Generated: Generated {
     // Validation (Objective-C wrappers)
     func validateUserId(value: ObjectPointer, error: NSErrorPointer) -> Bool {
         return validate(value) { (userId: NSString) in
-            validate(userId: userId as String) 
-        } 
+            validate(userId: userId as String)
+        }
     }
     
     func validateProof(value: ObjectPointer, error: NSErrorPointer) -> Bool {
         return validate(value) { (proof: NSString) in
-            validate(proof: proof as String) 
-        } 
+            validate(proof: proof as String)
+        }
     }
     
     func validateDate(value: ObjectPointer, error: NSErrorPointer) -> Bool {
         return validate(value) { (date: NSNumber) in
-            validate(date: date.integerValue) 
-        } 
+            validate(date: date.integerValue)
+        }
     }
     
     
