@@ -15,7 +15,7 @@ def process(obj):
         
     with open(swiftp, 'r') as swiftf:
         swift = swiftf.read()
-    
+
     generated = generate(obj, schema)
 
     with open(swiftp, 'w') as swiftf:
@@ -24,9 +24,10 @@ def process(obj):
 
 
 TEMPLATE = Template("""
-    class ${obj}_Generated: Generated { 
+class ${obj}_Generated: Generated { 
     
     // Object schema
+    
     override var keys_generated: [String] {
         return [${keys}]        
     }
@@ -49,25 +50,28 @@ BEGIN_GENERATE = "// BEGIN GENERATED CODE: DO NOT EDIT MANUALLY"
 END_GENERATE = "// END GENERATED CODE"
 
 
+def upFirst(something):
+    return something[:1].upper() + something[1:]
+
 def property_generate(args):
     key, type = args
     initial = '""' if type == "string" else '0'
     return """
-    private(set) var {} = {}
-""".format(key, initial)
+    private(set) var {} = {}""".format(key, initial)
 
 
 def validate_objc_generate(args):
     key, type = args
     nstype = "NSString" if type == "string" else "NSNumber"
+    fix = " as String" if type == "string" else ".integerValue"
     
     return Template("""
     func validate${Key}(value: ObjectPointer, error: NSErrorPointer) -> Bool {
         return validate(value) { ($key: ${NSType}) in
-            validate($key: $key.integerValue)
+            validate($key: ${key}${fix})
         }
     }
-""").substitute(key = key, Key = key.upper(), NSType = nstype)
+""").substitute(key = key, Key = upFirst(key), NSType = nstype, fix = fix)
 
 
 def validate_swift_generate(args):
@@ -77,7 +81,7 @@ def validate_swift_generate(args):
     func validate(#${key}: ${Type}) -> ValidationError? {
         return nil
     }
-""").substitute(key = key, Type = type.upper())
+""").substitute(key = key, Type = upFirst(type))
 
 
 def generate(obj, schema):
@@ -106,7 +110,7 @@ def load_schema(description):
 
 def replace_generated(generated, swift):
     pattern = "(?<={}).*(?={})".format(BEGIN_GENERATE, END_GENERATE)    
-    return re.sub(pattern, generated, swift)
+    return re.sub(pattern, generated, swift, flags = re.DOTALL)
 
 
 for obj in sys.argv[1:]:

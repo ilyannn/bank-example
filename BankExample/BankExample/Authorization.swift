@@ -12,50 +12,55 @@ import Foundation
 class Authorization_Generated: Generated { 
     
     // Object schema
+    
     override var keys_generated: [String] {
-        return ["userId", "date", "proof"]        
+        return ["date", "userId", "proof"]        
     }
     
-
+    
     // Generated properties
+    
+    private(set) var date = 0
     private(set) var userId = ""
     private(set) var proof = ""
-    private(set) var date = 0
-
-
-    // Validation (Objective-C wrappers)
-    func validateUserId(value: ObjectPointer, error: NSErrorPointer) -> Bool {
-        return validate(value) { (userId: NSString) in
-            validate(userId: userId as String)
-        }
-    }
     
-    func validateProof(value: ObjectPointer, error: NSErrorPointer) -> Bool {
-        return validate(value) { (proof: NSString) in
-            validate(proof: proof as String)
-        }
-    }
+    
+    // Validation (Objective-C wrappers)
     
     func validateDate(value: ObjectPointer, error: NSErrorPointer) -> Bool {
         return validate(value) { (date: NSNumber) in
             validate(date: date.integerValue)
         }
     }
-    
+
+    func validateUserId(value: ObjectPointer, error: NSErrorPointer) -> Bool {
+        return validate(value) { (userId: NSString) in
+            validate(userId: userId as String)
+        }
+    }
+
+    func validateProof(value: ObjectPointer, error: NSErrorPointer) -> Bool {
+        return validate(value) { (proof: NSString) in
+            validate(proof: proof as String)
+        }
+    }
+
+
     
     // Validation (native Swift)
-    func validate(#userId: String) -> ValidationError? {
-        return nil
-    }
-    
-    func validate(#proof: String) -> ValidationError? {
-        return nil
-    }
     
     func validate(#date: Int) -> ValidationError? {
         return nil
     }
-    
+
+    func validate(#userId: String) -> ValidationError? {
+        return nil
+    }
+
+    func validate(#proof: String) -> ValidationError? {
+        return nil
+    }
+
 }
 // END GENERATED CODE
 
