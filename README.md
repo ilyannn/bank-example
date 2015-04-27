@@ -52,7 +52,7 @@ It is possible to implement strong key obfuscation by slightly different means. 
 
 # 5 Network service
 
-The code comes with two test network services, mock service (`MockNetworkService` class) and test of the real network service (with the github endpoint, see ). Mock service only accepts `mock` username and returns a slighly incorrect date. Github service, of course, returns the date specified in the [now](https://github.com/ilyannn/bank-example/blob/master/TestService/api/now) file.
+The code comes with two test network services, mock service (`MockNetworkService` class) and test of the real network service (with the github endpoint, see below). Mock service returns a slighly incorrect date and only accepts `mock` username. Github-based service, of course, returns the date specified in the [now](https://github.com/ilyannn/bank-example/blob/master/TestService/api/now) file.
 
 The services are covered by tests in [NetworkServiceTests.swift](https://github.com/ilyannn/bank-example/blob/master/BankExample/BankExampleTests/NetworkServiceTests.swift).
 
@@ -60,7 +60,7 @@ To change the network service parameter, use the Settings app (the app should re
 
 # 6 Development methodology
 
-The code is extensively covered by tests in [BankExampleTests target](https://github.com/ilyannn/bank-example/tree/master/BankExample/BankExampleTests), which are sometimes written before the code itself and sometimes after. 
-
 Most [commits](https://github.com/ilyannn/bank-example/commits/master) are tied to the [issues](https://github.com/ilyannn/bank-example/issues?utf8=✓&q=is%3Aissue+).
+
+The code is extensively covered by tests in [BankExampleTests target](https://github.com/ilyannn/bank-example/tree/master/BankExample/BankExampleTests), which are sometimes written before the code itself and sometimes after. 
 
